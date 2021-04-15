@@ -1,0 +1,358 @@
+.profilepage {
+  padding-top: 30px;
+}
+
+.profilepage .container {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.profilepage .container .wrapper {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 'pro eve' ' rank svg';
+  grid-column-gap: 50px;
+  grid-row-gap: 40px;
+}
+
+.profilepage .container .pro {
+  background-color: #0c3264;
+  -webkit-box-shadow: 0 -2px 15px black;
+          box-shadow: 0 -2px 15px black;
+  border-radius: 20px;
+  padding: 30px 20px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 3fr;
+      grid-template-rows: 1fr 3fr;
+      grid-template-areas: 'pic' 'info';
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: pro;
+}
+
+.profilepage .container .pro p {
+  color: white;
+  font-size: 20px;
+  margin: 0;
+  padding: 10px;
+}
+
+.profilepage .container .pro .pro-pic {
+  background-color: white;
+  -webkit-box-shadow: 0 0px 5px black;
+          box-shadow: 0 0px 5px black;
+  border-radius: 20px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: pic;
+  display: -ms-grid;
+  display: grid;
+  padding: 10px 0;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+}
+
+.profilepage .container .pro .pro-pic i {
+  width: 100px;
+  font-size: 60px;
+  margin: auto;
+}
+
+.profilepage .container .pro .pro-pic .pro-username {
+  color: #0c3264;
+  font-size: 30px;
+  font-weight: 500;
+  margin: auto 0;
+}
+
+.profilepage .container .pro .pro-info {
+  margin: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.profilepage .container .pro .pro-info .row {
+  padding-left: 35px;
+}
+
+.profilepage .container .pro .pro-info .pro-info1 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.profilepage .container .pro .pro-info .pro-info1 i {
+  margin-right: 15px;
+  font-size: 23px;
+}
+
+.profilepage .container .pro .pro-info .pro-info2 p {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profilepage .container .rank {
+  background-color: #0c3264;
+  -webkit-box-shadow: 0 -2px 15px black;
+          box-shadow: 0 -2px 15px black;
+  border-radius: 20px;
+  padding: 30px 20px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: rank;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.profilepage .container .rank .title {
+  color: white;
+  text-align: center;
+  font-size: 25px;
+}
+
+.profilepage .container .rank .rank-pic {
+  background-color: white;
+  -webkit-box-shadow: 0 0px 5px black;
+          box-shadow: 0 0px 5px black;
+  border-radius: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px auto;
+      grid-template-columns: 50px auto;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.profilepage .container .rank .rank-pic img {
+  width: 120px;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.profilepage .container .rank .rank-pic .rank-num {
+  color: #0c3264;
+  font-size: 48px;
+  margin: auto 0;
+  text-align: center;
+  padding: 20px;
+  padding-right: 40px;
+}
+
+.profilepage .container .eve {
+  font-size: 20px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: eve;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 3fr;
+      grid-template-rows: 1fr 3fr;
+  background-color: #0c3264;
+  -webkit-box-shadow: 0 -2px 15px black;
+          box-shadow: 0 -2px 15px black;
+  border-radius: 20px;
+  padding: 30px 20px;
+}
+
+.profilepage .container .eve .eve-title {
+  background-color: white;
+  -webkit-box-shadow: 0 0px 5px black;
+          box-shadow: 0 0px 5px black;
+  border-radius: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  padding: 7px 0;
+}
+
+.profilepage .container .eve .eve-title i {
+  font-size: 60px;
+  margin: auto auto;
+}
+
+.profilepage .container .eve .eve-title .reg-eve {
+  color: #0c3264;
+  font-size: 30px;
+  font-weight: 500;
+  margin: auto 0;
+}
+
+.profilepage .container .eve .title {
+  color: white;
+  text-align: center;
+  font-size: 28px;
+}
+
+.profilepage .container .eve .table-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 250px;
+  overflow-y: scroll;
+  scrollbar-color: dark;
+  margin-top: 30px;
+}
+
+.profilepage .container .eve table {
+  margin: auto;
+  background-color: #0c3264;
+  pointer-events: none;
+}
+
+.profilepage .container .eve table tbody {
+  text-align: center;
+}
+
+.profilepage .container .eve table th {
+  margin: auto;
+  text-align: center;
+}
+
+.profilepage .container .eve table tr {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr 2fr;
+      grid-template-columns: 1fr 2fr 2fr;
+  border-radius: 10px;
+}
+
+.profilepage .container .eve table tr:hover {
+  background-color: initial;
+}
+
+.profilepage .container .svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.profilepage .container .svg img {
+  width: 80%;
+  margin: auto;
+}
+
+.profilepage .logout-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px;
+  margin-top: 40px;
+}
+
+.profilepage .logout-wrap button.logout {
+  padding: 10px 20px;
+  background-color: #ee4848;
+  margin: auto;
+  font-weight: 500;
+  color: white;
+}
+
+.profilepage .logout-wrap button.logout:hover {
+  background-color: #f53f3f;
+}
+
+@media (max-width: 1205px) {
+  .profilepage .container .wrapper {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: 'pro pro' 'rank svg' 'eve eve';
+    grid-row-gap: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .profilepage .container .pro p {
+    font-size: 23px;
+  }
+  .profilepage .container .pro .pro-pic {
+    padding: 15px;
+  }
+  .profilepage .container .pro .pro-pic img {
+    width: 120px;
+  }
+  .profilepage .container .pro .pro-pic .pro-username {
+    font-size: 38px;
+  }
+  .profilepage .container .svg {
+    margin: 50px 0;
+    width: 90%;
+  }
+}
+
+@media (max-width: 762px) {
+  .profilepage .container .wrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: 'pro' 'eve' 'rank' 'svg';
+    grid-row-gap: 25px;
+  }
+  .profilepage .container .pro {
+    padding: 10px;
+  }
+  .profilepage .container .pro p {
+    font-size: 20px;
+  }
+  .profilepage .container .pro .pro-pic img {
+    width: 80px;
+  }
+  .profilepage .container .pro .pro-pic .pro-username {
+    font-size: 28px;
+  }
+  .profilepage .container .svg {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .profilepage .container .pro .pro-info .pro-info1 span {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .profilepage .container .pro p {
+    font-size: 18px;
+  }
+  .profilepage .container .pro .pro-info .row {
+    padding-left: 10px;
+  }
+  .profilepage .container .pro .pro-info .pro-info1 i {
+    margin-right: 0px;
+  }
+}
+/*# sourceMappingURL=profile.css.map */

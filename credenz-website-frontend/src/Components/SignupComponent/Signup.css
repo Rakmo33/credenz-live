@@ -1,0 +1,143 @@
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+.stylebtn {
+    background: linear-gradient(45deg, #09b7ec, #2c8bda);
+    color: #ffffff !important;
+}
+
+.stylebtn:hover {
+    box-shadow: 1px 1px 8px #36dac3;
+}
+
+.signupFormWrap {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.forgotPasswordWrap {
+    min-height: 94vh;
+    display: flex;
+}
+
+.signupWrap {
+    min-height: 95vh;
+}
+
+.border-md {
+    border-width: 2px;
+}
+
+.btn-facebook {
+    background: #405d9d;
+    border: none;
+}
+
+.asterisk_input::after {
+    content: " *";
+    color: #e32;
+    position: absolute;
+    margin: 0px 0px 0px -20px;
+    font-size: x-large;
+    padding: 0 5px 0 0;
+}
+
+.btn-facebook:hover,
+.btn-facebook:focus {
+    background: #314879;
+}
+
+.btn-twitter {
+    background: #42aeec;
+    border: none;
+}
+
+.btn-twitter:hover,
+.btn-twitter:focus {
+    background: #1799e4;
+}
+
+::placeholder {
+    font-weight: 400;
+}
+
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSES
+* ==========================================
+*
+*/
+
+body {
+    min-height: 100vh;
+    background-color: black;
+}
+
+.form-control:not(select) {
+    padding: 1.5rem 0.5rem;
+}
+
+select.form-control {
+    height: 52px;
+    padding-left: 0.5rem;
+}
+
+.form-control::placeholder {
+    color: #ccc;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+small {
+    width: 100%;
+}
+
+.heightFooter {
+    margin-top: 44px;
+}
+
+.signupFormWrap .submitSpinner #feedbackSubmitBtn {
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.signupFormWrap .submitSpinner {
+    position: relative;
+}
+
+.signupFormWrap .submitSpinner span#spinnerCircle {
+    height: 5px;
+    width: 5px;
+    position: absolute;
+    /* margin: auto; */
+    /* z-index: 500; */
+    left: 46%;
+    top: 15%;
+    border-left: 3px solid #ffffff;
+    border-right: 3px solid #ffffff;
+    /* border-right: 4px solid black; */
+    padding: 15px;
+    border-radius: 50%;
+    animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

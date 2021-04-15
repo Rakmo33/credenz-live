@@ -1,0 +1,315 @@
+// $mainBG: #2fb3ff;
+// $text: #001f2e;
+// $innerText: #fff;
+// $boxShadow: #0c455c;
+// $innerBG: #001e2c;
+// $tabsBG: #fff;
+// $cart: #920926;
+// $cartHover: #ce0833;
+$mainBG: linear-gradient(45deg, #09b7ec, #2c8bda);
+// $mainBG: linear-gradient(45deg, #29abe2, #03488a);
+$text: #242424;
+$innerText: #e0f8ff;
+$boxShadow: #0c455c;
+$innerBG: #181818;
+$tabsBG: #ffffff27;
+$tabsText: #ffffff;
+$cart: radial-gradient(circle, rgb(236, 64, 12) 50%, rgb(255, 72, 0) 80%);
+$cart: linear-gradient(to left, #242525, #4d4b4b);
+$cart: linear-gradient(to right, #02243b, #02243b);
+$play: linear-gradient(to left, #02243b, #065572);
+$play2: linear-gradient(to right, #02243b, #065572);
+$cartHover: #ce0833;
+.evePage {
+    .showModal1 {
+        opacity: 1 !important;
+        left: 200px;
+    }
+    .showModal2 {
+        opacity: 1 !important;
+        right: 200px;
+    }
+    .shiftRight {
+        right: 150px;
+    }
+    .modalWrap {
+        // position: relative !important;
+        position: absolute !important;
+        background: $mainBG;
+        color: $text;
+        display: flex;
+        flex-direction: column;
+        z-index: 500;
+        // color: white;
+        // background-color: white;
+        // color: rgb(6, 51, 77);
+        width: 40%;
+        border-radius: 5px;
+        opacity: 0;
+        transition: all 0.3s;
+        box-shadow: 0px 0px 10px 5px $boxShadow;
+        .cartplayBtns {
+            display: flex;
+            width: 80%;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+        }
+        .modalHead {
+            display: flex;
+            margin: 10px auto;
+            width: 80%;
+            justify-content: space-evenly;
+            img {
+                width: 100px;
+                object-fit: cover;
+                object-position: center;
+                // filter: invert(1);
+            }
+            h3 {
+                font-weight: 600;
+                margin-top: 15px;
+                padding: 20px;
+            }
+            span {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                cursor: pointer;
+            }
+        }
+        .regNowBtn {
+            background: $cart;
+            height: fit-content;
+            margin: 15px auto;
+            color: white;
+            text-align: center;
+            padding: 10px 10px;
+            // border-radius: 5px;
+            box-shadow: 0 0 3px #000;
+            transition: all 0.1s;
+            border-top-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            i {
+                margin: 0 10px;
+            }
+            &:hover {
+                // transform: scale(1.03);
+                background-color: $cartHover;
+            }
+        }
+        .playNow {
+            i {
+                font-size: 22px;
+            }
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            // background: $play;
+            background: #02243b;
+            transition: all 0.3s ease-in;
+            padding-right: 15px;
+            animation: bounce 4s ease infinite;
+            cursor: pointer;
+            &:hover {
+                transition: all 0.3s ease-in;
+                transform: scale(1.07);
+                animation: none;
+                background: #053f55;
+                box-shadow: 0 0 5px 1px #fff;
+            }
+        }
+        @keyframes bounce {
+            5% {
+                background: #02243b;
+            }
+            14% {
+                background: #053f55;
+            }
+            18% {
+                background: #02243b;
+                box-shadow: 0 0 5px 1px #fff;
+            }
+            22% {
+                background: #065572;
+            }
+            28% {
+                background: #02243b;
+            }
+            85% {
+                transform: translateY(0%);
+            }
+            90% {
+                transform: translateY(-11%);
+            }
+            92% {
+                transform: translateY(0%);
+            }
+            95% {
+                transform: translateY(-7%);
+            }
+            97% {
+                transform: translateY(0%);
+            }
+            99% {
+                transform: translateY(-3%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        hr {
+            width: 95%;
+            border-top: 0px solid rgb(146, 146, 146);
+            margin: auto;
+        }
+        .modalBody {
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: $innerBG;
+            color: $innerText;
+            margin: 0 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            p {
+                // margin: 20px auto;
+                // margin-bottom: 30px;
+                text-align: center;
+            }
+            h5 {
+                margin: 10px auto;
+                text-align: center;
+            }
+            li {
+                list-style: circle;
+                display: flex;
+                justify-content: center;
+                span {
+                    font-weight: 500;
+                }
+            }
+            ul.tabs {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding: 0 2px;
+                background: $innerBG;
+                li {
+                    margin: 3px 1px;
+                    list-style: none;
+                    button {
+                        width: 100%;
+                        background-color: $tabsBG;
+                        padding: 10px;
+                        transition: all 0.15s;
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        height: 50px;
+                        i {
+                            color: $tabsText;
+                            font-size: 20px;
+                        }
+                        p {
+                            margin: 0;
+                            color: $tabsText;
+                        }
+                    }
+                }
+            }
+            .info {
+                overflow-y: scroll;
+                height: 250px;
+                width: 90%;
+                margin: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .activeTabButton {
+                background-color: $innerBG !important;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                color: white !important;
+                i {
+                    color: white !important;
+                }
+            }
+        }
+        .quizCheckboxWrap {
+            display: flex;
+            .quizCheckboxes {
+                margin: 20px auto 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .evePage {
+        .showModal1 {
+            opacity: 1 !important;
+            left: auto;
+        }
+        .showModal2 {
+            opacity: 1 !important;
+            right: auto;
+        }
+        .shiftRight {
+            right: auto;
+        }
+        .modalWrap {
+            width: 80%;
+        }
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    ul.tabs {
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)) !important;
+    }
+    .tab-button {
+        p {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    ul.tabs {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)) !important;
+    }
+    .tab-button {
+        p {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .evePage {
+        .modalWrap {
+            width: 90%;
+            .modalBody {
+                margin: 10px;
+                ul.tabs {
+                    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+                }
+                .info {
+                    max-height: 50vh;
+                    overflow-y: auto;
+                }
+                .tab-button {
+                    p {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

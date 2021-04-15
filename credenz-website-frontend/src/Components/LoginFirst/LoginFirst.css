@@ -1,0 +1,58 @@
+.loginFirst {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  margin: auto;
+  padding-top: 100px;
+  min-height: 100vh;
+}
+
+.loginFirst h1 {
+  font-size: 35px;
+  text-transform: capitalize;
+  margin: 30px;
+  color: #4fbcee;
+  text-align: center;
+}
+
+.loginFirst img {
+  width: 400px;
+  margin: 20px;
+}
+
+@media (max-width: 850px) {
+  .loginFirst h1 {
+    font-size: 5vw;
+    margin: 30px;
+  }
+  .loginFirst img {
+    width: 50vw;
+    margin: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .loginFirst {
+    width: 100%;
+  }
+  .loginFirst h1 {
+    font-size: 6vw;
+    margin: 30px 30px;
+  }
+  .loginFirst img {
+    width: 60vw;
+    margin: 20px;
+  }
+}
+/*# sourceMappingURL=LoginFirst.css.map */

@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-image: url(./assests/img/bg1.jpg); */
+    background-color: var(--dark-shade);
+    overflow: hidden ;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+button:active {
+    outline: none;
+    border: none;
+}
+
+button:focus {
+    outline: none;
+    border: none;
+}
+
+samp {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+html {
+    scroll-padding: 0px;
+}

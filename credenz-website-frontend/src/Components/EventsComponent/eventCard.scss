@@ -1,0 +1,320 @@
+$cardbg: linear-gradient(45deg, #36bed6, #2c8bda);
+// $cardbg: linear-gradient(45deg, #29abe2, #03488a);
+$cardborder: rgb(255, 255, 255);
+$textcolor: #ffffff;
+$isLogoWhite: 1;
+$cardglow: rgba(48, 196, 255, 0.5);
+$cardglowHover: 0 0 25px rgb(0, 247, 255);
+.evePage {
+    .event-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 130px;
+        margin: 0 auto;
+        transition: all 0.3s;
+        cursor: pointer;
+        div.customCard {
+            background-color: rgb(3, 56, 105);
+            border: 3px solid $cardborder;
+            transition: all 0.3s;
+            span#glow {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                z-index: -50;
+                pointer-events: none;
+                // box-shadow: 0 0 25px rgba(66, 146, 250, 0.5), 0 5px 25px rgba(48, 138, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+                box-shadow: $cardglowHover;
+                transition: all 0.3s;
+                animation: none !important;
+                & ::before {
+                    box-shadow: inset 0 0 30px 0 #a8ecff;
+                }
+            }
+            #glow.grid1 {
+                border-radius: 20px 5px 20px 0px;
+                animation: breath1 3.6s infinite;
+            }
+            #glow.grid2 {
+                border-radius: 5px 20px 0px 20px;
+                animation: breath2 3.6s infinite;
+            }
+            &:hover {
+                transform: scale(1.05) !important;
+            }
+            &:hover span#glow {
+                opacity: 1;
+            }
+        }
+        div {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            position: relative;
+            padding: 20px 0;
+            flex-direction: column;
+            background-color: white;
+            justify-content: center;
+            transition: transform 0.5s;
+            img {
+                height: 90%;
+                margin: auto;
+                pointer-events: none;
+                filter: invert($isLogoWhite);
+            }
+            h5 {
+                align-items: center;
+                font-size: 15px;
+                text-align: center;
+                margin: auto 0;
+                pointer-events: none;
+                color: $textcolor;
+                text-shadow: 0 0 1px $textcolor;
+            }
+            // &::after {
+            //     transform: scale(1.02) !important;
+            //     opacity: 0;
+            //     transition: opacity 0.3s ease-in-out;
+            //     box-shadow: 0 0 20px rgba(17, 88, 230, 0.8), 0 5px 20px rgba(192, 193, 196, 0.8), inset 0 1px #a8ecff, inset 0 -1px #a8ecff !important;
+            // }
+            // &:hover::after {
+            //     opacity: ;
+            // }
+        }
+    }
+    .fadeOut1 {
+        transform: translateX(-50px) scale(0.7);
+        opacity: 0;
+    }
+    .fadeOut2 {
+        transform: translateX(50px) scale(0.7);
+        opacity: 0;
+    }
+    .slideRight {
+        transform: translateX(350px) translateY(-50px) scale(0.85);
+    }
+    .slideLeft {
+        transform: translateX(-350px) translateY(-50px) scale(0.85);
+    }
+    .hide {
+        display: none;
+    }
+    .detect {
+        border-width: 3px !important;
+        border-style: solid !important;
+        border-color: transparent;
+        border-radius: 0 !important;
+        span.corner {
+            animation: blink 1.8s;
+        }
+        span.corner:before {
+            position: absolute;
+            content: '';
+            height: 2px;
+            background-color: cyan;
+            width: 25%;
+        }
+        span.corner::after {
+            position: absolute;
+            content: '';
+            width: 2px;
+            background-color: cyan;
+            height: 25%;
+        }
+        span.corner.top:before,
+        span.corner.top::after {
+            top: -7%;
+        }
+        span.corner.left:before,
+        span.corner.left:after {
+            left: -7%;
+        }
+        span.corner.right:before,
+        span.corner.right:after {
+            right: -7%;
+        }
+        span.corner.bottom:before,
+        span.corner.bottom:after {
+            bottom: -7%;
+        }
+    }
+    .detect {
+        background-blend-mode: color;
+        span#glow {
+            opacity: 0.1 !important;
+        }
+    }
+    .detect span#scanner {
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        width: 100%;
+        background-color: cyan;
+        position: absolute;
+        animation: scan 1.8s ease-in;
+    }
+    .detect.red {
+        border-color: red !important;
+    }
+    .detect.blue {
+        border-color: blue !important;
+    }
+    .detect.green {
+        border-color: rgb(0, 255, 13) !important;
+    }
+    .detect.green::after {
+        content: 'EVENT';
+        width: fit-content;
+        background-color: rgb(9, 255, 0);
+        position: absolute;
+        font-size: 10px;
+        bottom: -15%;
+        right: 0;
+        font-weight: 500;
+    }
+    .button {
+        backdrop-filter: blur(20px);
+        // transform: skewX(-10deg);
+        height: 50px;
+        width: 200px;
+        // border-radius: 200px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        text-shadow: 0 0 2px #fff;
+        cursor: pointer;
+    }
+    .button.grid1 {
+        border-radius: 20px 5px 20px 0px;
+        animation: breath1 3.6s infinite;
+    }
+    .button.grid2 {
+        border-radius: 5px 20px 0px 20px;
+        animation: breath2 3.6s infinite;
+    }
+    .firstRow {
+        animation-delay: 0s !important;
+    }
+    .secondRow {
+        animation-delay: 1.2s !important;
+    }
+    .thirdRow {
+        animation-delay: 2.4s !important;
+    }
+    .button:before {
+        // content: "";
+        display: block;
+        width: calc(100% - 2px);
+        height: calc(100% - 8px);
+        -webkit-animation: breath 2s infinite alternate;
+        animation: breath 2s infinite alternate;
+        // left: 10px;
+        // top: 3px;
+        position: absolute;
+        background-color: transparent;
+        border: 1px solid #fff;
+        border-radius: 15px 3px 15px 3px;
+    }
+    .button.ice {
+        // border-color: #a8ecff;
+        background-image: linear-gradient(45deg, #3cbaf5, #13719c);
+        background-image: $cardbg;
+        color: #141414;
+    }
+    .button.ice:before {
+        box-shadow: inset 0 0 30px 0 #a8ecff;
+    }
+    // .button:hover::after {
+    //     content: '';
+    //     transform: scale(1.02) !important;
+    //     // opacity: 0;
+    //     transition: opacity 0.3s ease-in-out;
+    //     box-shadow: 0 0 70px rgba(48, 138, 255, 0.8), 0 5px 20px rgba(48, 138, 255, 0.8), inset 0 1px #a8ecff, inset 0 -1px #a8ecff !important;
+    // }
+    .button+.button {
+        margin-top: 15px;
+        -webkit-animation-delay: 0.3s;
+        animation-delay: 0.3s;
+    }
+    @keyframes breath1 {
+        0% {
+            transform: skewX(0deg) scaleX(1);
+            box-shadow: 0 0 4px $cardglow, 0 5px 4px $cardglow, inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+        }
+        15% {
+            transform: skewX(2deg) scaleX(0.95);
+            box-shadow: 0 0 25px rgba(66, 146, 250, 0.5), 0 5px 25px $cardglow, inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+        }
+        30% {
+            transform: skewX(0deg) scaleX(1);
+        }
+        80% {
+            box-shadow: 0 0 4px $cardglow, 0 5px 4px $cardglow, inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+        }
+    }
+    @keyframes breath2 {
+        0% {
+            transform: skewX(0deg) scaleX(1);
+            box-shadow: 0 0 4px $cardglow, 0 5px 4px $cardglow, inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+        }
+        15% {
+            transform: skewX(-2deg) scaleX(0.95);
+            box-shadow: 0 0 25px rgba(66, 146, 250, 0.5), 0 5px 25px $cardglow, inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+        }
+        30% {
+            transform: skewX(0deg) scaleX(1);
+        }
+        80% {
+            box-shadow: 0 0 4px $cardglow, 0 5px 4px $cardglow, inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+        }
+    }
+}
+
+@keyframes borders {
+    0% {
+        border-color: red;
+    }
+    50% {
+        border-color: blue;
+    }
+    100% {
+        border-color: red;
+    }
+}
+
+@keyframes scan {
+    0% {
+        top: 0;
+    }
+    80% {
+        top: 100%;
+    }
+    100% {
+        top: 00%;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+}

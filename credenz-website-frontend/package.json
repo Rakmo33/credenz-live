@@ -1,0 +1,64 @@
+{
+    "name": "credenz20",
+    "version": "0.1.0",
+    "homepage": "https://credenz.in/",
+    "private": true,
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.34",
+        "@fortawesome/free-brands-svg-icons": "^5.15.2",
+        "@fortawesome/free-solid-svg-icons": "^5.15.2",
+        "@fortawesome/react-fontawesome": "^0.1.14",
+        "@material-ui/core": "^4.11.3",
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.5.0",
+        "@testing-library/user-event": "^7.2.1",
+        "animate-components": "^1.4.8",
+        "aos": "^2.3.4",
+        "axios": "^0.21.1",
+        "bootstrap": "^4.6.0",
+        "bootstrap-social": "^5.1.1",
+        "dotenv": "^8.2.0",
+        "emailjs": "^3.4.0",
+        "emailjs-com": "^2.6.4",
+        "font-awesome": "^4.7.0",
+        "framework7-react": "^5.7.14",
+        "jQuery": "^1.7.4",
+        "jquery": "^3.5.1",
+        "jwt-decode": "^3.1.2",
+        "node-sass": "^5.0.0",
+        "npm-lifecycle": "^3.1.5",
+        "popper.js": "^1.16.1",
+        "react": "^16.14.0",
+        "react-bootstrap": "^1.4.3",
+        "react-compound-timer": "^1.2.0",
+        "react-dom": "^16.14.0",
+        "react-hooks-helper": "^1.6.0",
+        "react-ippopay": "^1.0.3",
+        "react-multi-carousel": "^2.5.5",
+        "react-router-dom": "^5.2.0",
+        "react-router-hash-link": "^2.3.1",
+        "react-scripts": "3.4.3",
+        "react-transition-group": "^4.4.1"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}

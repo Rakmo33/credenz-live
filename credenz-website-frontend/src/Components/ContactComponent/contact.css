@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+.cont {
+    min-height: 100vh;
+    margin-top: -30px;
+}
+
+.container-fluid {
+    padding: 0 !important;
+}
+
+.tab {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.select h3 {
+    border: none!important;
+    border-bottom: 2px solid #41c3ee !important;
+    color: #41c3ee ! important;
+}
+
+@media(max-width:425px) {
+    .tab h3 {
+        border-bottom: 1px solid #ccc;
+        border-radius: 20px;
+    }
+}
+
+.tab h3 {
+    /* background-color: #ccc; */
+    padding: 5px 12px;
+    color: white;
+    /* font-family: 'Alata', sans-serif; */
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tab h3:hover {
+    color: #add8e6;
+}
+
+.head {
+    margin-top: 5vh;
+    justify-content: center;
+    width: 100%;
+}
+
+.content {
+    justify-content: center;
+}
+
+@keyframes slidedown {
+    0% {
+        margin-left: -30px
+    }
+    ;
+    100% {
+        margin-top: 0px
+    }
+    ;
+}
+
+.contacts {
+    margin: 30px;
+    width: 19rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+    /* background-color: #0a1018 !important; */
+    background-color: #181818 !important;
+    border: none !important;
+    border-radius: 5px;
+    /* font-family: 'Alata', sans-serif; */
+    animation-name: slidedown;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    background-color: #0a1018;
+    animation-timing-function: ease;
+}
+
+.contacts:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.contacts:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.card .card-body {
+    border: none !important;
+    text-align: center;
+}
+
+.contacts .card-body {
+    /* background-color: #192b42; */
+    background-color: #181818;
+    color: white;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform .2s;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.contacts-img {
+    height: 10rem;
+    opacity: 0.9;
+    width: 10rem !important;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 50% !important;
+    /* border: 2px solid #1e90ff; */
+    border: 2px solid #1e90ff;
+    padding: 5px;
+}
+
+.glinks{
+    color: #1e90ff !important;
+}
+
+.address {
+    color: #40497a;
+    /* font-family: 'Alata', sans-serif; */
+    text-align: center;
+}
+
+.addr {
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+.feedback {
+    width: 500px;
+    margin: auto;
+    /* margin-top: 30px; */
+    color: #fff;
+    /* font-family: 'Alata', sans-serif; */
+}
+
+.feedbackWrap {
+    min-height: 76vh;
+    margin: 0 auto;
+}
+
+.feedback label {
+    color: white;
+    font-size: 18px;
+}
+
+.feedback button[type="submit"] {
+    margin-left: 50%;
+    border-radius: 19px;
+    background-color: #ccc;
+    width: 200px;
+    transform: translate(-50%, 0);
+}
+
+.feedback .submitSpinner #feedbackSubmitBtn {
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.feedback .submitSpinner {
+    position: relative;
+}
+
+.feedback .submitSpinner span#spinnerCircle {
+    height: 5px;
+    width: 5px;
+    position: absolute;
+    /* margin: auto; */
+    /* z-index: 500; */
+    left: 46%;
+    top: 25%;
+    border-left: 3px solid #083e57;
+    border-right: 3px solid #083e57;
+    /* border-right: 4px solid black; */
+    padding: 15px;
+    border-radius: 50%;
+    animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.form-control {
+    padding: 5px !important;
+}
+
+@media only screen and (max-width:425px) {
+    .feedback {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .tab h3 {
+        font-size: 16px;
+    }
+}
+
+.team {
+    margin-left: 25%;
+    border-radius: 19px !important;
+    background-color: #ccc !important;
+    width: 150px;
+    height: 30px;
+    padding: 0 !important;
+    margin-top: -10px;
+}
+
+.img-pos {
+    object-fit: cover;
+    object-position: center;
+}

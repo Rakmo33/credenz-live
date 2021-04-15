@@ -1,0 +1,131 @@
+.AboutusContainer {
+    margin-top: 50px;
+    /* margin-left: 50px !important; */
+    /* margin-right: 50px !important; */
+    max-width: 1390px !important;
+
+}
+
+.img_size_cred {
+    width: 50%;
+}
+
+.img_size_pisb {
+    width: 50%;
+}
+
+.content {
+    padding: 20px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.mid {
+    text-align: center;
+}
+
+.credenz {
+    /* background-color: #fafafa; */
+    /* background-color: #e5ebf091; */
+    margin: 50px 0;
+}
+
+.pisb {
+    /* background-color: #e5ebf091; */
+    margin: 50px 0;
+}
+
+.logo_pos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 
+.content {
+    color: white;
+    color: rgba(255,176,0,.8);
+    background-color: var(--light-accent);
+    background-color: #333;
+    text-shadow: rgba(185,128,0,.2) 0.5em 0 0.2em;
+    border: .07em solid #222;
+    padding: .5em 1em;
+    box-shadow: inset 0 0 4em rgba(0,0,0,.5);
+    border-radius: 1em;
+    background-image: linear-gradient(to bottom,rgba(255,255,255,.05),rgba(255,255,255,.15) .5em,rgba(255,255,255,.05) 2em,rgba(255,255,255,.05) 2em,rgba(255,255,255,0)),linear-gradient(to bottom,#222,#222 50%,#000 50%,#000);
+    background-size: 100% 100%,100% 2px;
+    min-height: 5em;
+    white-space: pre-wrap;
+    tab-size: 4;
+    position: relative;
+} */
+
+
+/* @keyframes scanline {
+    from {
+        background-position: 0 -3.3em
+    }
+
+    to {
+        background-position: 0 16.7em
+    }
+}
+.content:after {
+    animation: scanline 12s linear infinite;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: 1em;
+    cursor: text;
+    background-image: linear-gradient(to bottom,rgba(255,176,0,0) 0,rgba(255,176,0,0) 1em,rgba(255,176,0,.05) 3em,rgba(255,176,0,.15) 3.1em,rgba(255,176,0,.01) 3.11em,rgba(255,176,0,.05) 3.2em,rgba(255,176,0,0) 3.3em,rgba(255,176,0,0) 10em);
+    background-size: cover;
+} */
+
+.content::after {
+    content: "";
+}
+
+.content {
+    display: block;
+    overflow: auto;
+    color: #ccc;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+@media (max-width:1300px) {
+    .img_size_cred {
+        width: 13vw;
+    }
+    .img_size_pisb {
+        width: 13vw;
+    }
+}
+
+@media (max-width:600px) {
+    .img_size_cred {
+        width: 30vw;
+        margin: 50px;
+    }
+    .img_size_pisb {
+        width: 50vw;
+        margin: 50px;
+    }
+    .logo_pos {
+        order: 1;
+    }
+    .content {
+        order: 2;
+    }
+}
+
+/* @media (min-width: 1200px){
+   #size #Aboutus .container {
+        width: 1390px !important;
+    }
+} */

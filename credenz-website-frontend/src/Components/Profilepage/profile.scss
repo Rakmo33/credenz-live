@@ -1,0 +1,317 @@
+@mixin flexCentered($dir) {
+    display: flex;
+    flex-direction: $dir;
+    align-items: center;
+    justify-content: center;
+}
+
+.profilepage {
+    padding-top: 30px;
+    .container {
+        margin-top: 20px;
+        margin-bottom: 50px;
+        .wrapper {
+            transform: scale(0.95);
+            display: grid;
+            justify-content: center;
+            align-items: flex-start;
+            grid-template-columns: 1fr 1fr;
+            // grid-template-rows: 1fr 1fr;
+            grid-template-areas: 'pro eve' ' rank svg';
+            grid-column-gap: 50px;
+            grid-row-gap: 40px;
+        }
+        .pro {
+            // width: fit-content;
+            background-color: #0c3264;
+            box-shadow: 0 -2px 15px rgba(0, 0, 0, 1);
+            border-radius: 20px;
+            padding: 30px 20px;
+            display: grid;
+            justify-content: space-between;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 3fr;
+            grid-template-areas: 'pic' 'info';
+            grid-area: pro;
+            p {
+                color: white;
+                font-size: 20px;
+                margin: 0;
+                padding: 10px;
+                // margin: 10px;
+                // width: fit-content;
+            }
+            .pro-pic {
+                background-color: white;
+                box-shadow: 0 0px 5px rgba(0, 0, 0, 1);
+                border-radius: 20px;
+                grid-area: pic;
+                display: grid;
+                padding: 10px 0;
+                grid-template-columns: 1fr 2fr;
+                i {
+                    width: 100px;
+                    font-size: 60px;
+                    margin: auto;
+                }
+                .pro-username {
+                    color: #0c3264;
+                    font-size: 30px;
+                    font-weight: 500;
+                    margin: auto 0;
+                }
+            }
+            .pro-info {
+                // display: grid;
+                margin: 40px 0;
+                // grid-template-columns: auto 1fr;
+                // grid-template-areas: 'info1 info2';
+                display: flex;
+                flex-direction: column;
+                .row {
+                    padding-left: 35px;
+                }
+                .pro-info1 {
+                    // min-width: 130px;
+                    width: max-content;
+                    i {
+                        margin-right: 15px;
+                        font-size: 23px;
+                    }
+                }
+                .pro-info2 p {
+                    // background: lawngreen;
+                    display: block;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+        .rank {
+            // width: fit-content;
+            // margin-top: 50px;
+            background-color: #0c3264;
+            box-shadow: 0 -2px 15px rgba(0, 0, 0, 1);
+            border-radius: 20px;
+            padding: 30px 20px;
+            grid-area: rank;
+            justify-content: space-between;
+            .title {
+                color: white;
+                text-align: center;
+                font-size: 25px;
+            }
+            .rank-pic {
+                background-color: white;
+                box-shadow: 0 0px 5px rgba(0, 0, 0, 1);
+                border-radius: 20px;
+                display: grid;
+                grid-template-columns: 50px auto;
+                justify-content: space-evenly;
+                img {
+                    width: 120px;
+                    margin: auto;
+                    border-radius: 50%;
+                }
+                .rank-num {
+                    color: #0c3264;
+                    font-size: 48px;
+                    margin: auto 0;
+                    text-align: center;
+                    padding: 20px;
+                    padding-right: 40px;
+                }
+            }
+        }
+        .eve {
+            font-size: 20px;
+            grid-area: eve;
+            height: 100%;
+            display: grid;
+            grid-template-rows: 1fr 3fr;
+            background-color: #0c3264;
+            // align-items: center;
+            box-shadow: 0 -2px 15px rgba(0, 0, 0, 1);
+            border-radius: 20px;
+            padding: 30px 20px;
+            .eve-title {
+                background-color: white;
+                box-shadow: 0 0px 5px rgba(0, 0, 0, 1);
+                border-radius: 20px;
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                padding: 7px 0;
+                i {
+                    font-size: 60px;
+                    margin: auto auto;
+                }
+                .reg-eve {
+                    color: #0c3264;
+                    font-size: 30px;
+                    font-weight: 500;
+                    margin: auto 0;
+                }
+            }
+            .title {
+                color: white;
+                text-align: center;
+                font-size: 28px;
+            }
+            .table-container {
+                display: flex;
+                max-height: 250px;
+                overflow-y: scroll;
+                scrollbar-color: dark;
+                margin-top: 30px;
+            }
+            table {
+                margin: auto;
+                background-color: #0c3264;
+                pointer-events: none;
+                tbody {
+                    text-align: center;
+                }
+                th {
+                    margin: auto;
+                    text-align: center;
+                }
+                tr {
+                    display: grid;
+                    grid-template-columns: 1fr 2fr 2fr;
+                    border-radius: 10px;
+                    &:hover {
+                        background-color: initial;
+                    }
+                    // td {
+                    //     text-align: start;
+                    // }
+                }
+            }
+        }
+        .svg {
+            display: flex;
+            img {
+                width: 80%;
+                margin: auto;
+            }
+        }
+    }
+    .logout-wrap {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        margin-top: 40px;
+        button.logout {
+            padding: 10px 20px;
+            background-color: rgb(238, 72, 72);
+            margin: auto;
+            font-weight: 500;
+            color: white;
+            &:hover {
+                background-color: rgb(245, 63, 63);
+            }
+        }
+    }
+}
+
+@media(max-width: 1205px) {
+    .profilepage {
+        .container {
+            .wrapper {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+                grid-template-areas: 'pro pro' 'rank svg' 'eve eve';
+                grid-row-gap: 10px;
+                align-items: center;
+            }
+            .pro {
+                p {
+                    font-size: 23px;
+                }
+                .pro-pic {
+                    padding: 15px;
+                    img {
+                        width: 120px;
+                    }
+                    .pro-username {
+                        font-size: 38px;
+                    }
+                }
+            }
+            .svg {
+                margin: 50px 0;
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media(max-width: 762px) {
+    .profilepage {
+        .container {
+            .wrapper {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                grid-template-areas: 'pro' 'eve' 'rank' 'svg';
+                grid-row-gap: 25px;
+            }
+            .pro {
+                padding: 10px;
+                p {
+                    font-size: 20px;
+                }
+                .pro-pic {
+                    img {
+                        width: 80px;
+                    }
+                    .pro-username {
+                        font-size: 28px;
+                    }
+                }
+            }
+            .svg {
+                margin: 0;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .profilepage {
+        .container {
+            .pro {
+                .pro-info {
+                    .pro-info1 {
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 420px) {
+    .profilepage {
+        .container {
+            .pro {
+                p {
+                    font-size: 18px;
+                }
+                .pro-info {
+                    .row {
+                        padding-left: 10px;
+                    }
+                    .pro-info1 {
+                        i {
+                            margin-right: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

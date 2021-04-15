@@ -1,0 +1,427 @@
+.evePage .showModal1 {
+  opacity: 1 !important;
+  left: 200px;
+}
+
+.evePage .showModal2 {
+  opacity: 1 !important;
+  right: 200px;
+}
+
+.evePage .shiftRight {
+  right: 150px;
+}
+
+.evePage .modalWrap {
+  position: absolute !important;
+  background: linear-gradient(45deg, #09b7ec, #2c8bda);
+  color: #242424;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 500;
+  width: 40%;
+  border-radius: 5px;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-shadow: 0px 0px 10px 5px #0c455c;
+          box-shadow: 0px 0px 10px 5px #0c455c;
+}
+
+.evePage .modalWrap .cartplayBtns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.evePage .modalWrap .modalHead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px auto;
+  width: 80%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.evePage .modalWrap .modalHead img {
+  width: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.evePage .modalWrap .modalHead h3 {
+  font-weight: 600;
+  margin-top: 15px;
+  padding: 20px;
+}
+
+.evePage .modalWrap .modalHead span {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.evePage .modalWrap .regNowBtn {
+  background: -webkit-gradient(linear, left top, right top, from(#02243b), to(#02243b));
+  background: linear-gradient(to right, #02243b, #02243b);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 15px auto;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  -webkit-box-shadow: 0 0 3px #000;
+          box-shadow: 0 0 3px #000;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.evePage .modalWrap .regNowBtn i {
+  margin: 0 10px;
+}
+
+.evePage .modalWrap .regNowBtn:hover {
+  background-color: #ce0833;
+}
+
+.evePage .modalWrap .playNow {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background: #02243b;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  padding-right: 15px;
+  -webkit-animation: bounce 4s ease infinite;
+          animation: bounce 4s ease infinite;
+  cursor: pointer;
+}
+
+.evePage .modalWrap .playNow i {
+  font-size: 22px;
+}
+
+.evePage .modalWrap .playNow:hover {
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+  -webkit-animation: none;
+          animation: none;
+  background: #053f55;
+  -webkit-box-shadow: 0 0 5px 1px #fff;
+          box-shadow: 0 0 5px 1px #fff;
+}
+
+@-webkit-keyframes bounce {
+  5% {
+    background: #02243b;
+  }
+  14% {
+    background: #053f55;
+  }
+  18% {
+    background: #02243b;
+    -webkit-box-shadow: 0 0 5px 1px #fff;
+            box-shadow: 0 0 5px 1px #fff;
+  }
+  22% {
+    background: #065572;
+  }
+  28% {
+    background: #02243b;
+  }
+  85% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  90% {
+    -webkit-transform: translateY(-11%);
+            transform: translateY(-11%);
+  }
+  92% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  95% {
+    -webkit-transform: translateY(-7%);
+            transform: translateY(-7%);
+  }
+  97% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  99% {
+    -webkit-transform: translateY(-3%);
+            transform: translateY(-3%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  5% {
+    background: #02243b;
+  }
+  14% {
+    background: #053f55;
+  }
+  18% {
+    background: #02243b;
+    -webkit-box-shadow: 0 0 5px 1px #fff;
+            box-shadow: 0 0 5px 1px #fff;
+  }
+  22% {
+    background: #065572;
+  }
+  28% {
+    background: #02243b;
+  }
+  85% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  90% {
+    -webkit-transform: translateY(-11%);
+            transform: translateY(-11%);
+  }
+  92% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  95% {
+    -webkit-transform: translateY(-7%);
+            transform: translateY(-7%);
+  }
+  97% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  99% {
+    -webkit-transform: translateY(-3%);
+            transform: translateY(-3%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.evePage .modalWrap hr {
+  width: 95%;
+  border-top: 0px solid #929292;
+  margin: auto;
+}
+
+.evePage .modalWrap .modalBody {
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #181818;
+  color: #e0f8ff;
+  margin: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.evePage .modalWrap .modalBody p {
+  text-align: center;
+}
+
+.evePage .modalWrap .modalBody h5 {
+  margin: 10px auto;
+  text-align: center;
+}
+
+.evePage .modalWrap .modalBody li {
+  list-style: circle;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.evePage .modalWrap .modalBody li span {
+  font-weight: 500;
+}
+
+.evePage .modalWrap .modalBody ul.tabs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 0 2px;
+  background: #181818;
+}
+
+.evePage .modalWrap .modalBody ul.tabs li {
+  margin: 3px 1px;
+  list-style: none;
+}
+
+.evePage .modalWrap .modalBody ul.tabs li button {
+  width: 100%;
+  background-color: #ffffff27;
+  padding: 10px;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+}
+
+.evePage .modalWrap .modalBody ul.tabs li button i {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.evePage .modalWrap .modalBody ul.tabs li button p {
+  margin: 0;
+  color: #ffffff;
+}
+
+.evePage .modalWrap .modalBody .info {
+  overflow-y: scroll;
+  height: 250px;
+  width: 90%;
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.evePage .modalWrap .modalBody .activeTabButton {
+  background-color: #181818 !important;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: white !important;
+}
+
+.evePage .modalWrap .modalBody .activeTabButton i {
+  color: white !important;
+}
+
+.evePage .modalWrap .quizCheckboxWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.evePage .modalWrap .quizCheckboxWrap .quizCheckboxes {
+  margin: 20px auto 0;
+}
+
+@media (max-width: 1200px) {
+  .evePage .showModal1 {
+    opacity: 1 !important;
+    left: auto;
+  }
+  .evePage .showModal2 {
+    opacity: 1 !important;
+    right: auto;
+  }
+  .evePage .shiftRight {
+    right: auto;
+  }
+  .evePage .modalWrap {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  ul.tabs {
+    -ms-grid-columns: (minmax(90px, 1fr))[auto-fit] !important;
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)) !important;
+  }
+  .tab-button p {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  ul.tabs {
+    -ms-grid-columns: (minmax(50px, 1fr))[auto-fit] !important;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)) !important;
+  }
+  .tab-button p {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .evePage .modalWrap {
+    width: 90%;
+  }
+  .evePage .modalWrap .modalBody {
+    margin: 10px;
+  }
+  .evePage .modalWrap .modalBody ul.tabs {
+    -ms-grid-columns: (minmax(50px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  }
+  .evePage .modalWrap .modalBody .info {
+    max-height: 50vh;
+    overflow-y: auto;
+  }
+  .evePage .modalWrap .modalBody .tab-button p {
+    display: none;
+  }
+}
+/*# sourceMappingURL=eventmodal.css.map */

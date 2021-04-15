@@ -1,0 +1,143 @@
+.anim {
+    height: calc(100vh - 60px);
+    width: 100vw;
+    position: relative;
+    /* background: rgb(7, 19, 51); */
+    background: radial-gradient(circle, rgba(7, 19, 51, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    /* background-image: url("../../../assests/img/main_bg_2.jpg"); */
+}
+
+.hide {
+    display: none;
+}
+
+.anim-overlay-lower {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* background-color: black; */
+    z-index: 4;
+}
+
+.anim-overlay-bg {
+    width: 101vw;
+    object-fit: contain;
+    opacity: 1;
+    z-index: 3;
+    /* animation: delay-fade-in 5s linear forwards; */
+    /* animation-delay: 1s; */
+    /* background-image: url('../../../assests/img/main_bg_3.png'); */
+}
+
+.anim-overlay-upper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* background-color: black; */
+    z-index: 5;
+}
+
+.notLoadedBG {
+    opacity: 0;
+    /* display: none; */
+}
+
+.loadedBG {
+    opacity: 0;
+    object-fit: contain;
+    /* display: block; */
+    height: 100vh;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    background: radial-gradient(circle, rgba(7, 19, 51, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    animation: delay-fade-in 1s linear forwards;
+    /* animation-delay: 500s; */
+}
+
+.vanish {
+    animation: disappear 0.75s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.hide-after-nine {
+    animation: delay_hide 9s linear;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.anim-overlay-logos {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.homeWrap .footer {
+    background: transparent !important;
+}
+
+@media only screen and (min-width: 768px) {
+    .anim-iframe {
+        width: 101vw;
+        object-fit: contain;
+        height: 100vh;
+        background-repeat: no-repeat;
+        object-fit: contain;
+        background-position: center;
+        background-size: cover;
+        background: radial-gradient(circle, rgba(7, 19, 51, 1) 0%, rgba(0, 0, 0, 1) 100%);
+        /* background: red; */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .anim-iframe {
+        height: 101vh;
+        object-fit: contain;
+    }
+}
+
+@keyframes disappear {
+    from {
+        opacity: 1;
+        display: block;
+    }
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes delay-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes delay_hide {
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}

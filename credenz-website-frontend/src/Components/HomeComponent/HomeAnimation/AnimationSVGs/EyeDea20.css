@@ -1,0 +1,85 @@
+@keyframes left_fade{
+    91%{transform: translateX(0%) scale(1);}
+    97%{transform: translateX(-15%) scale(2);}
+    100%{transform: translateX(0%) scale(1);}
+}
+.translate_left{
+    transform-origin: 50% 49.5%;
+    animation: left_fade 9s linear;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@keyframes right_fade{
+    91%{transform: translateX(0%) scale(1);}
+    97%{transform: translateX(15%) scale(2);}
+    100%{transform: translateX(0%) scale(1);}
+}
+.translate_right{
+    animation: right_fade 9s linear;
+    transform-origin: 50% 49.5%;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@keyframes anim_ring1 {
+    0% {transform: rotate(0deg);}
+    16% {transform: rotate(120deg);}
+    33% {transform: rotate(0deg) scale(1);}
+    36% {transform: scale(0.95);}
+    39% { transform: scale(1.05); }
+    43% { transform: scale(0.95) rotate(0deg);}
+    47%{ transform: scale(0.6) rotate(0deg);}
+    67%{ transform: scale(0.6) rotate(-100deg);}
+    87%{ transform: scale(0.6) rotate(0deg);}
+    91%{transform: scale(1);}
+    97% { transform: scale(2);}
+    100% { transform: scale(0.6);}
+}
+.complete_ring1{
+    animation: anim_ring1 9s linear;
+    transform-origin: 49.6% 50%;
+}
+@keyframes anim_ring2 {
+    0% {transform: rotate(0deg);}
+    16% {transform: rotate(120deg);}
+    33% {transform: rotate(0deg) scale(1);}
+    36% {transform: scale(0.95);}
+    39% { transform: scale(1.05); }
+    43% { transform: scale(0.95) rotate(0deg);}
+    47%{ transform: scale(0.9) rotate(0deg);}
+    67%{ transform: scale(0.9) rotate(-100deg);}
+    87%{ transform: scale(0.9) rotate(0deg);}
+    91%{transform: scale(1);}
+    97% { transform: scale(2);}
+    100% { transform: scale(0.6);}
+}
+.complete_ring2{
+    animation: anim_ring2 9s linear;
+    transform-origin: 49.6% 50%;
+}
+@keyframes anim_ring3 {
+    0% {transform: rotate(0deg);}
+    16% {transform: rotate(120deg);}
+    33% {transform: rotate(0deg) scale(1);}
+    36% {transform: scale(0.95);}
+    39% { transform: scale(1.05); }
+    43% { transform: scale(0.95) rotate(0deg);}
+    47%{ transform: scale(1.55) rotate(0deg);}
+    67%{ transform: scale(1.55) rotate(-100deg);}
+    87%{ transform: scale(1.55) rotate(0deg);}
+    91%{transform: scale(1);}
+    97% { transform: scale(2);}
+    100% { transform: scale(0.6);}
+}
+.complete_ring3{
+    animation: anim_ring3 9s linear;
+    transform-origin: 49.6% 50%;
+}
+#eyeDEA2_0_svg__Layer_1{
+    transform: scale(0.85) ;
+}

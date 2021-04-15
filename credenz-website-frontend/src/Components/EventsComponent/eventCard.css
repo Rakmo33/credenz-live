@@ -1,0 +1,484 @@
+.evePage .event-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 130px;
+  margin: 0 auto;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.evePage .event-wrap div.customCard {
+  background-color: #033869;
+  border: 3px solid white;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.evePage .event-wrap div.customCard span#glow {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  z-index: -50;
+  pointer-events: none;
+  -webkit-box-shadow: 0 0 25px #00f7ff;
+          box-shadow: 0 0 25px #00f7ff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-animation: none !important;
+          animation: none !important;
+}
+
+.evePage .event-wrap div.customCard span#glow ::before {
+  -webkit-box-shadow: inset 0 0 30px 0 #a8ecff;
+          box-shadow: inset 0 0 30px 0 #a8ecff;
+}
+
+.evePage .event-wrap div.customCard #glow.grid1 {
+  border-radius: 20px 5px 20px 0px;
+  -webkit-animation: breath1 3.6s infinite;
+          animation: breath1 3.6s infinite;
+}
+
+.evePage .event-wrap div.customCard #glow.grid2 {
+  border-radius: 5px 20px 0px 20px;
+  -webkit-animation: breath2 3.6s infinite;
+          animation: breath2 3.6s infinite;
+}
+
+.evePage .event-wrap div.customCard:hover {
+  -webkit-transform: scale(1.05) !important;
+          transform: scale(1.05) !important;
+}
+
+.evePage .event-wrap div.customCard:hover span#glow {
+  opacity: 1;
+}
+
+.evePage .event-wrap div {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding: 20px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.evePage .event-wrap div img {
+  height: 90%;
+  margin: auto;
+  pointer-events: none;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.evePage .event-wrap div h5 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 15px;
+  text-align: center;
+  margin: auto 0;
+  pointer-events: none;
+  color: #ffffff;
+  text-shadow: 0 0 1px #ffffff;
+}
+
+.evePage .fadeOut1 {
+  -webkit-transform: translateX(-50px) scale(0.7);
+          transform: translateX(-50px) scale(0.7);
+  opacity: 0;
+}
+
+.evePage .fadeOut2 {
+  -webkit-transform: translateX(50px) scale(0.7);
+          transform: translateX(50px) scale(0.7);
+  opacity: 0;
+}
+
+.evePage .slideRight {
+  -webkit-transform: translateX(350px) translateY(-50px) scale(0.85);
+          transform: translateX(350px) translateY(-50px) scale(0.85);
+}
+
+.evePage .slideLeft {
+  -webkit-transform: translateX(-350px) translateY(-50px) scale(0.85);
+          transform: translateX(-350px) translateY(-50px) scale(0.85);
+}
+
+.evePage .hide {
+  display: none;
+}
+
+.evePage .detect {
+  border-width: 3px !important;
+  border-style: solid !important;
+  border-color: transparent;
+  border-radius: 0 !important;
+}
+
+.evePage .detect span.corner {
+  -webkit-animation: blink 1.8s;
+          animation: blink 1.8s;
+}
+
+.evePage .detect span.corner:before {
+  position: absolute;
+  content: '';
+  height: 2px;
+  background-color: cyan;
+  width: 25%;
+}
+
+.evePage .detect span.corner::after {
+  position: absolute;
+  content: '';
+  width: 2px;
+  background-color: cyan;
+  height: 25%;
+}
+
+.evePage .detect span.corner.top:before,
+.evePage .detect span.corner.top::after {
+  top: -7%;
+}
+
+.evePage .detect span.corner.left:before,
+.evePage .detect span.corner.left:after {
+  left: -7%;
+}
+
+.evePage .detect span.corner.right:before,
+.evePage .detect span.corner.right:after {
+  right: -7%;
+}
+
+.evePage .detect span.corner.bottom:before,
+.evePage .detect span.corner.bottom:after {
+  bottom: -7%;
+}
+
+.evePage .detect {
+  background-blend-mode: color;
+}
+
+.evePage .detect span#glow {
+  opacity: 0.1 !important;
+}
+
+.evePage .detect span#scanner {
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  width: 100%;
+  background-color: cyan;
+  position: absolute;
+  -webkit-animation: scan 1.8s ease-in;
+          animation: scan 1.8s ease-in;
+}
+
+.evePage .detect.red {
+  border-color: red !important;
+}
+
+.evePage .detect.blue {
+  border-color: blue !important;
+}
+
+.evePage .detect.green {
+  border-color: #00ff0d !important;
+}
+
+.evePage .detect.green::after {
+  content: 'EVENT';
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #09ff00;
+  position: absolute;
+  font-size: 10px;
+  bottom: -15%;
+  right: 0;
+  font-weight: 500;
+}
+
+.evePage .button {
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  height: 50px;
+  width: 200px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 2px #fff;
+  cursor: pointer;
+}
+
+.evePage .button.grid1 {
+  border-radius: 20px 5px 20px 0px;
+  -webkit-animation: breath1 3.6s infinite;
+          animation: breath1 3.6s infinite;
+}
+
+.evePage .button.grid2 {
+  border-radius: 5px 20px 0px 20px;
+  -webkit-animation: breath2 3.6s infinite;
+          animation: breath2 3.6s infinite;
+}
+
+.evePage .firstRow {
+  -webkit-animation-delay: 0s !important;
+          animation-delay: 0s !important;
+}
+
+.evePage .secondRow {
+  -webkit-animation-delay: 1.2s !important;
+          animation-delay: 1.2s !important;
+}
+
+.evePage .thirdRow {
+  -webkit-animation-delay: 2.4s !important;
+          animation-delay: 2.4s !important;
+}
+
+.evePage .button:before {
+  display: block;
+  width: calc(100% - 2px);
+  height: calc(100% - 8px);
+  -webkit-animation: breath 2s infinite alternate;
+  animation: breath 2s infinite alternate;
+  position: absolute;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 15px 3px 15px 3px;
+}
+
+.evePage .button.ice {
+  background-image: linear-gradient(45deg, #3cbaf5, #13719c);
+  background-image: linear-gradient(45deg, #36bed6, #2c8bda);
+  color: #141414;
+}
+
+.evePage .button.ice:before {
+  -webkit-box-shadow: inset 0 0 30px 0 #a8ecff;
+          box-shadow: inset 0 0 30px 0 #a8ecff;
+}
+
+.evePage .button + .button {
+  margin-top: 15px;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+@-webkit-keyframes breath1 {
+  0% {
+    -webkit-transform: skewX(0deg) scaleX(1);
+            transform: skewX(0deg) scaleX(1);
+    -webkit-box-shadow: 0 0 4px rgba(48, 196, 255, 0.5), 0 5px 4px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+            box-shadow: 0 0 4px rgba(48, 196, 255, 0.5), 0 5px 4px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+  }
+  15% {
+    -webkit-transform: skewX(2deg) scaleX(0.95);
+            transform: skewX(2deg) scaleX(0.95);
+    -webkit-box-shadow: 0 0 25px rgba(66, 146, 250, 0.5), 0 5px 25px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+            box-shadow: 0 0 25px rgba(66, 146, 250, 0.5), 0 5px 25px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+  }
+  30% {
+    -webkit-transform: skewX(0deg) scaleX(1);
+            transform: skewX(0deg) scaleX(1);
+  }
+  80% {
+    -webkit-box-shadow: 0 0 4px rgba(48, 196, 255, 0.5), 0 5px 4px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+            box-shadow: 0 0 4px rgba(48, 196, 255, 0.5), 0 5px 4px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+  }
+}
+
+@keyframes breath1 {
+  0% {
+    -webkit-transform: skewX(0deg) scaleX(1);
+            transform: skewX(0deg) scaleX(1);
+    -webkit-box-shadow: 0 0 4px rgba(48, 196, 255, 0.5), 0 5px 4px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+            box-shadow: 0 0 4px rgba(48, 196, 255, 0.5), 0 5px 4px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+  }
+  15% {
+    -webkit-transform: skewX(2deg) scaleX(0.95);
+            transform: skewX(2deg) scaleX(0.95);
+    -webkit-box-shadow: 0 0 25px rgba(66, 146, 250, 0.5), 0 5px 25px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+            box-shadow: 0 0 25px rgba(66, 146, 250, 0.5), 0 5px 25px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+  }
+  30% {
+    -webkit-transform: skewX(0deg) scaleX(1);
+            transform: skewX(0deg) scaleX(1);
+  }
+  80% {
+    -webkit-box-shadow: 0 0 4px rgba(48, 196, 255, 0.5), 0 5px 4px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+            box-shadow: 0 0 4px rgba(48, 196, 255, 0.5), 0 5px 4px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+  }
+}
+
+@-webkit-keyframes breath2 {
+  0% {
+    -webkit-transform: skewX(0deg) scaleX(1);
+            transform: skewX(0deg) scaleX(1);
+    -webkit-box-shadow: 0 0 4px rgba(48, 196, 255, 0.5), 0 5px 4px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+            box-shadow: 0 0 4px rgba(48, 196, 255, 0.5), 0 5px 4px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+  }
+  15% {
+    -webkit-transform: skewX(-2deg) scaleX(0.95);
+            transform: skewX(-2deg) scaleX(0.95);
+    -webkit-box-shadow: 0 0 25px rgba(66, 146, 250, 0.5), 0 5px 25px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+            box-shadow: 0 0 25px rgba(66, 146, 250, 0.5), 0 5px 25px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+  }
+  30% {
+    -webkit-transform: skewX(0deg) scaleX(1);
+            transform: skewX(0deg) scaleX(1);
+  }
+  80% {
+    -webkit-box-shadow: 0 0 4px rgba(48, 196, 255, 0.5), 0 5px 4px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+            box-shadow: 0 0 4px rgba(48, 196, 255, 0.5), 0 5px 4px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+  }
+}
+
+@keyframes breath2 {
+  0% {
+    -webkit-transform: skewX(0deg) scaleX(1);
+            transform: skewX(0deg) scaleX(1);
+    -webkit-box-shadow: 0 0 4px rgba(48, 196, 255, 0.5), 0 5px 4px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+            box-shadow: 0 0 4px rgba(48, 196, 255, 0.5), 0 5px 4px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+  }
+  15% {
+    -webkit-transform: skewX(-2deg) scaleX(0.95);
+            transform: skewX(-2deg) scaleX(0.95);
+    -webkit-box-shadow: 0 0 25px rgba(66, 146, 250, 0.5), 0 5px 25px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+            box-shadow: 0 0 25px rgba(66, 146, 250, 0.5), 0 5px 25px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+  }
+  30% {
+    -webkit-transform: skewX(0deg) scaleX(1);
+            transform: skewX(0deg) scaleX(1);
+  }
+  80% {
+    -webkit-box-shadow: 0 0 4px rgba(48, 196, 255, 0.5), 0 5px 4px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+            box-shadow: 0 0 4px rgba(48, 196, 255, 0.5), 0 5px 4px rgba(48, 196, 255, 0.5), inset 0 1px #a8fff8, inset 0 -1px #a8ffff;
+  }
+}
+
+@-webkit-keyframes borders {
+  0% {
+    border-color: red;
+  }
+  50% {
+    border-color: blue;
+  }
+  100% {
+    border-color: red;
+  }
+}
+
+@keyframes borders {
+  0% {
+    border-color: red;
+  }
+  50% {
+    border-color: blue;
+  }
+  100% {
+    border-color: red;
+  }
+}
+
+@-webkit-keyframes scan {
+  0% {
+    top: 0;
+  }
+  80% {
+    top: 100%;
+  }
+  100% {
+    top: 00%;
+  }
+}
+
+@keyframes scan {
+  0% {
+    top: 0;
+  }
+  80% {
+    top: 100%;
+  }
+  100% {
+    top: 00%;
+  }
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=eventCard.css.map */

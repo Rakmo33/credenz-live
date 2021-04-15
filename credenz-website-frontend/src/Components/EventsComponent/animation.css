@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap");
+.eve-anim-wrap {
+  background: #242424;
+  background: radial-gradient(circle, #242424 10%, #121212 60%);
+  margin-top: -35px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.eve-anim {
+  min-height: 88vh;
+  width: 80%;
+  margin: auto;
+  padding-top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: 1fr 1.5fr 1fr;
+      grid-template-columns: 1fr 1.5fr 1fr;
+}
+
+.eve-anim ::-webkit-scrollbar {
+  width: 5px;
+}
+
+.eve-anim ::-webkit-scrollbar-track {
+  background-color: #ebebeb;
+}
+
+.eve-anim ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #6d6d6d;
+}
+
+.eve-anim .events-grid {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: (120px)[3];
+      grid-template-rows: repeat(3, 120px);
+  padding: 20px 0;
+  grid-gap: 40px;
+}
+
+.eve-anim .roboWrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-rows: 1fr 10fr;
+      grid-template-rows: 1fr 10fr;
+}
+
+.eve-anim .roboWrap .roboMsg {
+  background-color: #131212;
+  width: 70%;
+  position: relative;
+  top: 80px;
+  z-index: 50;
+  height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  border: 5px solid #15ade5;
+  border-radius: 2px;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  opacity: 0;
+}
+
+.eve-anim .roboWrap .roboMsg #RobotextWrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.eve-anim .roboWrap .roboMsg #Robotext {
+  color: #15ade5;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.644);
+  font-weight: 500;
+  height: 100%;
+  overflow: hidden;
+  padding: 7px;
+  font-size: 16px;
+}
+
+.eve-anim .roboWrap .roboMsg span {
+  height: 30px;
+  width: 20px;
+  top: 100%;
+  right: auto;
+  left: -5px;
+  border-right: 25px solid transparent;
+  border-top: 35px solid #2fb3ff;
+  bottom: 0;
+  position: relative;
+}
+
+.eve-anim .roboWrap .slide-up {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+}
+
+.eve-anim .red {
+  background-color: red;
+}
+
+.eve-anim .disabled {
+  background-color: red;
+  pointer-events: none;
+}
+
+.eve-anim.flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+@media (max-width: 1200px) {
+  .eve-anim {
+    width: 95%;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    grid-column-gap: 100px;
+  }
+}
+
+@media (max-width: 800px) {
+  .eve-anim {
+    width: 85%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    grid-column-gap: 100px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .eve-anim .roboWrap {
+    display: none;
+  }
+}
+/*# sourceMappingURL=animation.css.map */
