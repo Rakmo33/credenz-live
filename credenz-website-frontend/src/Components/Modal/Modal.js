@@ -47,58 +47,58 @@ function ModalTitle({ type, event }) {
 }
 
 function ModalBody({ handleClose, type, event, event_info }) {
+  const demoUsername = "demo";
+  const demoPassword = "demo";
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [logged, setLogged] = useState(false);
 
   const [spinner, setSpinner] = useState("form-group");
   const [error, setError] = useState("error");
+  const [errorMessage, setErrorMessage] = useState("");
 
   function refreshPage() {
     window.location.reload(false);
   }
 
   if (type === "login") {
-    const login = (e) => {
-      //console.log("Login Form Submitted!");
-      setSpinner("form-group loginBtnWrap");
-
+    const login = async (e) => {
       e.preventDefault();
+      setSpinner("form-group loginBtnWrap");
+      setError("error");
+      setErrorMessage("");
 
       try {
-        axios
-          .post(`${process.env.REACT_APP_API_URL}/login`, {
-            username: username,
-            password: password,
-          })
-          .then(function (response) {
-            // //console.log(response.data);
-            //const msg = response.data["accessToken"]
-            if (response.data["accessToken"]) {
-              // alert("Logged in successfully!");
-              localStorage.setItem("user", JSON.stringify(response.data));
+        const response = await axios.post(
+          `${process.env.REACT_APP_API_URL}/login`,
+          { username, password }
+        );
 
-              handleClose();
-              localStorage.removeItem("Cart");
-              localStorage.removeItem("Register");
-              refreshPage();
-              // const user = jwt(response.data["accessToken"]);
-              // //console.log("JWT decode : " + JSON.stringify(user));
-              localStorage.removeItem("Cart");
-              localStorage.removeItem("Register");
-              setLogged(true);
-            } else {
-              // alert("Invalid login credentials!");
-              setError("error invalid");
-              setSpinner("form-group ");
-              localStorage.removeItem("Cart");
-              localStorage.removeItem("Register");
-              localStorage.removeItem("user");
-              setLogged(false);
-            }
-          });
+        if (response.data["accessToken"]) {
+          localStorage.setItem("user", JSON.stringify(response.data));
+          localStorage.removeItem("Cart");
+          localStorage.removeItem("Register");
+          setLogged(true);
+          handleClose();
+          refreshPage();
+        } else {
+          throw new Error("Invalid username or password.");
+        }
       } catch (e) {
-        // alert("Axios error!" + e);
+        localStorage.removeItem("Cart");
+        localStorage.removeItem("Register");
+        localStorage.removeItem("user");
+        setLogged(false);
+        setError("error invalid");
+        setErrorMessage(
+          e.response
+            ? "Invalid username or password."
+            : e.message === "Invalid username or password."
+            ? e.message
+            : "Unable to reach the server. Please try again."
+        );
+      } finally {
+        setSpinner("form-group");
       }
     };
 
@@ -107,6 +107,22 @@ function ModalBody({ handleClose, type, event, event_info }) {
         <div className='modal-login'>
           <form onSubmit={login}>
             {/* <form> */}
+            <div className='demo-credentials'>
+              <div>
+                <strong>Demo account</strong>
+                <span>Username: demo&nbsp;&nbsp; Password: demo</span>
+              </div>
+              <button
+                type='button'
+                onClick={() => {
+                  setUsername(demoUsername);
+                  setPassword(demoPassword);
+                  setError("error");
+                  setErrorMessage("");
+                }}>
+                Use demo account
+              </button>
+            </div>
             <div className='form-group'>
               <div className='input-group'>
                 <span className='input-group-addon'>
@@ -118,6 +134,7 @@ function ModalBody({ handleClose, type, event, event_info }) {
                   name='username'
                   placeholder='Username'
                   required='required'
+                  value={username}
                   onChange={(e) => setUsername(e.target.value)}
                 />
               </div>
@@ -133,11 +150,12 @@ function ModalBody({ handleClose, type, event, event_info }) {
                   name='password'
                   placeholder='Password'
                   required='required'
+                  value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
             </div>
-            <h6 className={error}>Invalid Credentials!</h6>
+            <h6 className={error}>{errorMessage}</h6>
             {/* <div className='form-group'> */}
             <div className={spinner}>
               <button

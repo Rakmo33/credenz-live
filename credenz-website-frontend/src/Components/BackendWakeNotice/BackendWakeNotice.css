@@ -1,0 +1,15 @@
+.backend-wake-notice {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2000;
+  width: min(420px, calc(100vw - 32px));
+  padding: 14px 18px;
+  border-left: 4px solid #29b6f6;
+  border-radius: 4px;
+  background: #082f49;
+  color: #fff;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  font-size: 14px;
+  line-height: 1.45;
+}

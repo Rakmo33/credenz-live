@@ -9,6 +9,7 @@ import jwt from "jwt-decode";
 import Nav from "../Navbar/Navbar";
 //import jwt from "jwt-decode";
 import $ from "jquery";
+import Alert from "../Alert/alert";
 
 const Profile = () => {
   // const logout = () => {
@@ -19,6 +20,8 @@ const Profile = () => {
   //console.log(`${process.env.REACT_APP_API_URL}/LOL`);
 
   const [Events, setEvents] = useState(undefined);
+  const [eventsLoading, setEventsLoading] = useState(true);
+  const [apiError, setApiError] = useState(false);
 
   var screenHeight = window.screen.height;
   if (screenHeight < 901) {
@@ -94,9 +97,11 @@ const Profile = () => {
             //   })
             // );
             setEvents(response.data);
+            setEventsLoading(false);
           })
           .catch((error) => {
-            console.log(error);
+            setApiError(true);
+            setEventsLoading(false);
           });
       }
     } else {
@@ -114,7 +119,9 @@ const Profile = () => {
     var EventList;
     user = jwt(localStorage.getItem("user"));
 
-    if (Events !== undefined) {
+    if (eventsLoading) {
+      EventList = "Loading registered events…";
+    } else if (Events !== undefined) {
       // console.log(Events);
       EventList = Events.map((x) => {
         return (
@@ -136,6 +143,14 @@ const Profile = () => {
     return (
       <div style={{ background: "black" }}>
         <Nav />
+        {apiError ? (
+          <div className='container' style={{ paddingTop: "90px" }}>
+            <Alert show={apiError} setShow={setApiError} var='danger'>
+              Your registered events could not be loaded. Please refresh the
+              page and try again.
+            </Alert>
+          </div>
+        ) : null}
         <div className='profilepage'>
           <div className='container'>
             <div className='wrapper'>

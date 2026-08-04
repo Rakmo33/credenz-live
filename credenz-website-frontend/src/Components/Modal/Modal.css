@@ -186,6 +186,48 @@
     display: block;
 }
 
+.modal-login .demo-credentials {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding: 12px;
+    border: 1px solid rgba(8, 62, 87, 0.25);
+    border-radius: 5px;
+    background: #f2f8fa;
+    color: #083e57;
+    font-size: 13px;
+}
+
+.modal-login .demo-credentials strong,
+.modal-login .demo-credentials span {
+    display: block;
+}
+
+.modal-login .demo-credentials button {
+    flex-shrink: 0;
+    padding: 6px 9px;
+    border: 0;
+    border-radius: 4px;
+    background: #083e57;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.modal-login .demo-credentials button:hover,
+.modal-login .demo-credentials button:focus {
+    background: #0b5778;
+}
+
+@media (max-width: 420px) {
+    .modal-login .demo-credentials {
+        align-items: stretch;
+        flex-direction: column;
+    }
+}
+
 .modal-login .loginBtnWrap #loginBtn {
     opacity: 0.2;
     pointer-events: none;

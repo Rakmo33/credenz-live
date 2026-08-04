@@ -178,15 +178,15 @@ signup = async (req, res) => {
 // Post('/login', c.login)
 login = async (req, res) => {
   if (req.method === "POST") {
-    var user = await User.findOne({ username: req.body.username });
-    if (!user) {
-      user = await User.findOne({ email: req.body.username });
-      if (!user) {
-        return res.status(400).json({ message: "User Not Found" });
-      }
-    }
-
     try {
+      var user = await User.findOne({ username: req.body.username });
+      if (!user) {
+        user = await User.findOne({ email: req.body.username });
+        if (!user) {
+          return res.status(401).json({ message: "Invalid username or password" });
+        }
+      }
+
       if (req.body.password == user.password) {
         const accessToken = jwt.sign(
           user.toJSON(),
@@ -194,10 +194,11 @@ login = async (req, res) => {
         );
         return res.json({ accessToken: accessToken });
       } else {
-        return res.json({ message: "Password Wrong!" });
+        return res.status(401).json({ message: "Invalid username or password" });
       }
     } catch (err) {
-      return res.status(500).json({ message: `Internal error ${err}` });
+      console.error("Login failed:", err);
+      return res.status(500).json({ message: "Unable to log in right now" });
     }
   }
 };

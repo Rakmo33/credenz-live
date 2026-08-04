@@ -33,93 +33,52 @@ function Signup() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const submitForm = (e) => {
-    setSpinner("form-group col-lg-12 submitSpinner");
+  const submitForm = async (e) => {
     e.preventDefault();
-    // //console.log(
-    //   "Current state is : " +
-    //     JSON.stringify({ email, phone, college, password })
-    // );
-
-    if (Object.keys(errors).length === 0 && errors.constructor === Object) {
-      try {
-        axios
-          .post(`${process.env.REACT_APP_API_URL}/signup`, {
-            username: username,
-            name: name,
-            password: password,
-            email: email,
-            phoneno: phone,
-            ieee: member === "IEEE" ? true : false,
-            isPict: college === "PICT" ? true : false,
-            clgname: collegeName,
-            clgID: clgID,
-          })
-          .then(function (response) {
-            // //console.log(response);
-            // console.log(response.data);
-            // const msg = response.data["accessToken"];
-            localStorage.setItem("user", JSON.stringify(response.data));
-            // //console.log(msg);
-            // //console.log("HEREEE");
-            try {
-              axios
-                .post(`${process.env.REACT_APP_API_URL}/login`, {
-                  username: username,
-                  password: password,
-                })
-                .then(function (response) {
-                  setName("");
-                  setUsername("");
-                  setPhone("");
-                  setEmail("");
-                  setCollege("");
-                  setPassword("");
-                  setPasswordCheck("");
-                  // //console.log(response.data);
-                  //const msg = response.data["accessToken"]
-                  if (response.data["accessToken"]) {
-                    // alert("Logged in successfully!");
-                    localStorage.setItem("user", JSON.stringify(response.data));
-
-                    handleClose();
-                    window.location.href = "/profile";
-                  } else {
-                    localStorage.removeItem("user");
-                  }
-                });
-            } catch (e) {
-              //console.log("Axios alert" + e);
-              // alert("Axios error!" + e);
-              setSpinner("form-group col-lg-12 ");
-              setShowAlert(true);
-            }
-          })
-          .catch((e) => {
-            if (e.response.status === member) {
-              //console.log("Axios alert" + e);
-              setSpinner("form-group col-lg-12 ");
-              setShowAlert(true);
-            }
-
-            setSpinner("form-group col-lg-12 ");
-            setShowAlert(true);
-
-            // throw e;
-
-            // //console.log("Axios alert" + e);
-            // alert("Axios error!" + e);
-            // setSpinner("form-group col-lg-12 ");
-          });
-      } catch (e) {
-        //console.log("Axios alert" + e);
-        // alert("Axios error!" + e);
-        setSpinner("form-group col-lg-12 ");
-        setShowAlert(true);
-      }
+    if (!(Object.keys(errors).length === 0 && errors.constructor === Object)) {
+      return;
     }
 
-    // e.preventDefualt()
+    setSpinner("form-group col-lg-12 submitSpinner");
+    setShowAlert(false);
+
+    try {
+      await axios.post(`${process.env.REACT_APP_API_URL}/signup`, {
+        username,
+        name,
+        password,
+        email,
+        phoneno: phone,
+        ieee: member === "IEEE",
+        isPict: college === "PICT",
+        clgname: collegeName,
+        clgID,
+      });
+
+      const response = await axios.post(
+        `${process.env.REACT_APP_API_URL}/login`,
+        { username, password }
+      );
+      if (!response.data["accessToken"]) {
+        throw new Error("Account created, but automatic login failed.");
+      }
+
+      localStorage.setItem("user", JSON.stringify(response.data));
+      setName("");
+      setUsername("");
+      setPhone("");
+      setEmail("");
+      setCollege("");
+      setPassword("");
+      setPasswordCheck("");
+      handleClose();
+      window.location.href = "/profile";
+    } catch (e) {
+      localStorage.removeItem("user");
+      setShowAlert(true);
+    } finally {
+      setSpinner("form-group col-lg-12 ");
+    }
   };
 
   const values = {

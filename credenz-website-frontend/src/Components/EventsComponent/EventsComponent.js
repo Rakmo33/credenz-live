@@ -30,6 +30,7 @@ const Events = (props) => {
   const handleShow1 = () => setShowLogin(true);
 
   const [Events, setEvents] = useState(undefined);
+  const [apiError, setApiError] = useState(false);
   let user = "";
 
   // const handleShow = (event) => {
@@ -63,7 +64,7 @@ const Events = (props) => {
             setEvents(response.data);
           })
           .catch((error) => {
-            console.log(error);
+            setApiError(true);
           });
       }
     } else {
@@ -98,14 +99,12 @@ const Events = (props) => {
   }
 
   useEffect(() => {
-    let result = AllEvents();
     getEvents();
 
     document.title = `CREDENZ LIVE | Events`;
-    result.then((res) => {
-      setEVENTS(res);
-      //window.location.reload(false); //refresh page
-    });
+    AllEvents()
+      .then((res) => setEVENTS(res))
+      .catch(() => setApiError(true));
   }, []);
 
   let type = false;
@@ -276,6 +275,14 @@ const Events = (props) => {
   return (
     <div className='evePage' style={{ marginTop: "70px" }}>
       <Navbar cartNum={tempCartNum} />
+      {apiError ? (
+        <div className='container' style={{ paddingTop: "20px" }}>
+          <Alert show={apiError} setShow={setApiError} var='danger'>
+            Some event information could not be loaded. Please try refreshing
+            the page in a moment.
+          </Alert>
+        </div>
+      ) : null}
       <SideEvent />
       <Animation
         addToCart={addToCart}
